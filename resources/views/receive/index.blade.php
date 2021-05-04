@@ -87,7 +87,7 @@
 					</td>
 					<td align="center" style="font-weight: bold;">
 						<span style="color: @if($r->status == '0') orange @elseif($r->status == '1') green @else red @endif  ">
-							{{$orderStatus[$r->status]}}
+							{{ config('brvreceive.status_label')[$r->status] }}
 						</span>
 					</td>
 					<td align="center">
