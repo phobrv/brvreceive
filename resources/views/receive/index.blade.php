@@ -60,14 +60,31 @@
 						@isset($r->phone)
 						Phone: {{$r->phone}} <br>
 						@endif
+						@isset($r->email)
+						Email: {{$r->email}} <br>
+						@endif
 						@isset($r->add)
 						Add: {{$r->add}} <br>
 						@endif
+
+					</td>
+					<td>
 						@isset($r->title)
 						Title: {{$r->title}} <br>
 						@endif
+						@isset($r->content) <br>
+						Content:  {{$r->content}}
+						@endif
+
+						@isset($r->description) <br>
+						Description:  {{$r->description}}
+						@endif
+
+						@isset($r->note) <br>
+						Note: {{$r->note}}
+						@endif
+
 					</td>
-					<td>{{$r->content}}</td>
 					<td align="center" style="font-weight: bold;">
 						<span style="color: @if($r->status == 'pendding') orange @elseif($r->status == 'success') green @else red @endif  ">
 							{{$orderStatus[$r->status]}}
