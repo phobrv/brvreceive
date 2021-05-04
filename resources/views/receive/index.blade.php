@@ -86,16 +86,16 @@
 
 					</td>
 					<td align="center" style="font-weight: bold;">
-						<span style="color: @if($r->status == 'pendding') orange @elseif($r->status == 'success') green @else red @endif  ">
+						<span style="color: @if($r->status == '0') orange @elseif($r->status == '1') green @else red @endif  ">
 							{{$orderStatus[$r->status]}}
 						</span>
 					</td>
 					<td align="center">
-						<a href="{{route('receive.updateStatus',array('id'=>$r->id,'status'=>'success'))}}" style="color: green;">
+						<a href="{{route('receive.updateStatus',array('id'=>$r->id,'status'=>'1'))}}" style="color: green;">
 							<i class="fa fa-check" title="Success"></i>
 						</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="{{route('receive.updateStatus',array('id'=>$r->id,'status'=>'fail'))}}" style="color: red;">
+						<a href="{{route('receive.updateStatus',array('id'=>$r->id,'status'=>'-1'))}}" style="color: red;">
 							<i class="fa fa-ban" title="Fail"></i>
 						</a>
 

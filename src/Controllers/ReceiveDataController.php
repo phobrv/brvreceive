@@ -24,7 +24,7 @@ class ReceiveDataController extends Controller {
 		$this->userRepository = $userRepository;
 		$this->receiveRepository = $receiveRepository;
 		$this->unitService = $unitService;
-		$this->listReceiveType = config('brvreceive.receive_type');
+		$this->listReceiveType = config('brvreceive.type');
 	}
 
 	/**
