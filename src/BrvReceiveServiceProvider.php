@@ -28,7 +28,7 @@ class BrvReceiveServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register(): void{
-		// $this->mergeConfigFrom(__DIR__.'/../config/brvreceive.php', 'brvreceive');
+		$this->mergeConfigFrom(__DIR__ . '/../config/brvreceive.php', 'brvreceive');
 
 		// Register the service the package provides.
 		$this->app->singleton('brvreceive', function ($app) {
@@ -52,9 +52,9 @@ class BrvReceiveServiceProvider extends ServiceProvider {
 	 */
 	protected function bootForConsole(): void{
 		// Publishing the configuration file.
-		// $this->publishes([
-		//     __DIR__.'/../config/brvreceive.php' => config_path('brvreceive.php'),
-		// ], 'brvreceive.config');
+		$this->publishes([
+			__DIR__ . '/../config/brvreceive.php' => config_path('brvreceive.php'),
+		], 'brvreceive.config');
 
 		// Publishing the views.
 		$this->publishes([

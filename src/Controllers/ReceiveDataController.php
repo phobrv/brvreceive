@@ -24,12 +24,7 @@ class ReceiveDataController extends Controller {
 		$this->userRepository = $userRepository;
 		$this->receiveRepository = $receiveRepository;
 		$this->unitService = $unitService;
-
-		$this->listReceiveType = [
-			'0' => '-',
-			'contact' => 'Liên hệ',
-			'poupRegis' => 'Popup đăng ký tư vấn',
-		];
+		$this->listReceiveType = config('brvreceive.receive_type');
 	}
 
 	/**
