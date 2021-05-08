@@ -5,9 +5,9 @@ namespace Phobrv\BrvReceive\Controllers;
 use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Http\Request;
-use Phobrv\CoreAdmin\Repositories\ReceiveDataRepository;
-use Phobrv\CoreAdmin\Repositories\UserRepository;
-use Phobrv\CoreAdmin\Services\UnitServices;
+use Phobrv\BrvCore\Repositories\ReceiveDataRepository;
+use Phobrv\BrvCore\Repositories\UserRepository;
+use Phobrv\BrvCore\Services\UnitServices;
 
 class ReceiveDataController extends Controller {
 	protected $receiveRepository;
