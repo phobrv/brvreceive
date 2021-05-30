@@ -16,7 +16,7 @@
 					</td>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select_status',$orderStatus,(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
+							{{ Form::select('select_status',config('brvreceive.orderStatus'),(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
 						</div>
 					</td>
 
