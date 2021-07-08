@@ -50,26 +50,26 @@ class BrvReceiveServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	protected function bootForConsole(): void {
+	protected function bootForConsole(): void{
 		// Publishing the configuration file.
-		// $this->publishes([
-		// 	__DIR__ . '/../config/brvreceive.php' => config_path('brvreceive.php'),
-		// ], 'brvreceive.config');
+		$this->publishes([
+			__DIR__ . '/../config/brvreceive.php' => config_path('brvreceive.php'),
+		], 'brvreceive.config');
 
 		// Publishing the views.
 		/*$this->publishes([
-	            __DIR__.'/../resources/views' => base_path('resources/views/vendor/phobrv'),
-*/
+		__DIR__.'/../resources/views' => base_path('resources/views/vendor/phobrv'),
+		 */
 
 		// Publishing assets.
 		/*$this->publishes([
-	            __DIR__.'/../resources/assets' => public_path('vendor/phobrv'),
-*/
+		__DIR__.'/../resources/assets' => public_path('vendor/phobrv'),
+		 */
 
 		// Publishing the translation files.
 		/*$this->publishes([
-	            __DIR__.'/../resources/lang' => resource_path('lang/vendor/phobrv'),
-*/
+		__DIR__.'/../resources/lang' => resource_path('lang/vendor/phobrv'),
+		 */
 
 		// Registering package commands.
 		// $this->commands([]);
