@@ -9,7 +9,7 @@
 				<tr>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select',config('brvreceive.status'),(isset($data['select']) ? $data['select'] : '0'),array('id'=>'choose','class'=>'form-control')) }}
+							{{ Form::select('select',config('brvreceive.statusLabel'),(isset($data['select']) ? $data['select'] : '0'),array('id'=>'choose','class'=>'form-control')) }}
 						</div>
 					</td>
 					<td>
@@ -51,7 +51,7 @@
 					</td>
 					<td align="center" style="font-weight: bold;">
 						<span style="color: {{ config('brvreceive.statusColor')[$r->status] ?? '' }}  ">
-							{{config('brvreceive.status')[$r->status] ?? ''}}
+							{{config('brvreceive.statusLabel')[$r->status] ?? ''}}
 						</span>
 					</td>
 					<td align="center">

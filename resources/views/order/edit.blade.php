@@ -12,7 +12,7 @@
 		<div class="box-body">
 			@csrf
 			@method('put')
-			@include('phobrv::input.inputSelect',['label'=>'Tình trạng đơn hàng','key'=>'status','array'=>config('brvreceive.status'),'default'=>'pedding'])
+			@include('phobrv::input.inputSelect',['label'=>'Tình trạng đơn hàng','key'=>'status','array'=>config('brvreceive.statusLabel'),'default'=>'pedding'])
 			@include('phobrv::input.inputText',['label'=>'Người mua','key'=>'name','readonly'=>'readonly'])
 			@include('phobrv::input.inputText',['label'=>'Địa chỉ','key'=>'name','readonly'=>'readonly'])
 			@include('phobrv::input.inputText',['label'=>'Phone','key'=>'phone','readonly'=>'readonly'])
