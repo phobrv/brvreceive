@@ -45,12 +45,12 @@ class ReceiveDataController extends Controller {
 			$data['select_status'] = $this->userRepository->getMetaValueByKey($user, 'select_status');
 
 			$arrayFindWhere = [];
-			if ($data['select'] || $data['select_status']) {
-				if ($data['select']) {
+			if (isset($data['select']) || isset($data['select_status'])) {
+				if (isset($data['select'])) {
 					$arrayFindWhere['type'] = $data['select'];
 				}
 
-				if ($data['select_status']) {
+				if (isset($data['select_status'])) {
 					$arrayFindWhere['status'] = $data['select_status'];
 				}
 
