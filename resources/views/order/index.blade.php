@@ -9,7 +9,7 @@
 				<tr>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select',$orderStatus,(isset($data['select']) ? $data['select'] : '0'),array('id'=>'choose','class'=>'form-control')) }}
+							{{ Form::select('select',config('brvreceive.orderStatus'),(isset($data['select']) ? $data['select'] : '0'),array('id'=>'choose','class'=>'form-control')) }}
 						</div>
 					</td>
 					<td>
