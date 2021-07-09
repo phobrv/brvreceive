@@ -21,4 +21,10 @@ return [
 		'success' => 'Success',
 		'fail' => 'Fail',
 	],
+	'orderStatusColor' => [
+		'0' => 'grey',
+		'pendding' => 'orange',
+		'success' => 'green',
+		'fail' => 'red',
+	],
 ];

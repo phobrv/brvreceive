@@ -50,8 +50,8 @@
 						Add: {{$r->add}} <br>
 					</td>
 					<td align="center" style="font-weight: bold;">
-						<span style="color: @if($r->status == 'pendding') orange @elseif($r->status == 'success') green @else red @endif  ">
-							{{$orderStatus[$r->status]}}
+						<span style="color: {{ config('brvreceive.orderStatusColor')[$r->status] ?? '' }}  ">
+							{{config('brvreceive.orderStatus')[$r->status] ?? ''}}
 						</span>
 					</td>
 					<td align="center">
