@@ -11,12 +11,12 @@
 				<tr>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select',$data['listReceiveType'],(isset($data['select']) ? $data['select'] : '0'),array('class'=>'form-control')) }}
+							{{ Form::select('select',config('brvreceive.type'),(isset($data['select']) ? $data['select'] : '0'),array('class'=>'form-control')) }}
 						</div>
 					</td>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select_status',config('brvreceive.status'),(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
+							{{ Form::select('select_status',config('brvreceive.statusLabel'),(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
 						</div>
 					</td>
 
