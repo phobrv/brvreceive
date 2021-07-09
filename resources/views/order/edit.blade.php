@@ -16,7 +16,7 @@
 			@include('phobrv::input.inputText',['label'=>'Người mua','key'=>'name','readonly'=>'readonly'])
 			@include('phobrv::input.inputText',['label'=>'Địa chỉ','key'=>'name','readonly'=>'readonly'])
 			@include('phobrv::input.inputText',['label'=>'Phone','key'=>'phone','readonly'=>'readonly'])
-			@include('phobrv::input.inputText',['label'=>'Ghi chú đơn hàng','key'=>'description','readonly'=>'readonly'])
+			@include('phobrv::input.inputText',['label'=>'Ghi chú đơn hàng','key'=>'description'])
 			<div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label"> Content </label>
 				<div class="col-sm-10">
