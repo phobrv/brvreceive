@@ -134,7 +134,7 @@ class OrderController extends Controller {
 	 */
 	public function destroy($id) {
 		// $this->receiveRepository->destroy($id);
-		$receive = $this->receiveRepository->update(['status' => 'fail'], $id);
+		$receive = $this->receiveRepository->update(['status' => config('brvreceive.status.fail')], $id);
 		$msg = __("Delete post success!");
 		return redirect()->route('order.index')->with('alert_success', $msg);
 
