@@ -16,7 +16,7 @@
 					</td>
 					<td style="text-align:center; padding-right: 10px;">
 						<div class="form-group">
-							{{ Form::select('select_status',config('brvreceive.orderStatus'),(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
+							{{ Form::select('select_status',config('brvreceive.status'),(isset($data['select_status']) ? $data['select_status'] : '0'),array('class'=>'form-control')) }}
 						</div>
 					</td>
 
@@ -86,8 +86,8 @@
 
 					</td>
 					<td align="center" style="font-weight: bold;">
-						<span style="color: @if($r->status == '0') orange @elseif($r->status == '1') green @else red @endif  ">
-							{{ config('brvreceive.status_label')[$r->status] }}
+						<span style="color:  {{ config('brvreceive.statusColor')[$r->status] ?? '' }}">
+							{{ config('brvreceive.statusLabel')[$r->status] }}
 						</span>
 					</td>
 					<td align="center">
